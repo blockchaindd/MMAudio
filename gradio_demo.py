@@ -335,7 +335,7 @@ image_to_audio_tab = gr.Interface(
 
 if __name__ == "__main__":
     parser = ArgumentParser()
-    parser.add_argument('--port', type=int, default=7860)
+    parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', 8080)))
     args = parser.parse_args()
 
     gr.TabbedInterface([video_to_audio_tab, text_to_audio_tab, image_to_audio_tab],
