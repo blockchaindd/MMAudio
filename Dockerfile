@@ -16,7 +16,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port that the app runs on
-EXPOSE 7860
+EXPOSE 8080
 
 # Run the application
 CMD ["python", "gradio_demo.py"]
